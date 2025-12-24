@@ -1,3 +1,4 @@
+![Tests](https://github.com/RamkrushnaSaner/BLACK-SCHOLES/actions/workflows/tests.yml/badge.svg)
 # Black–Scholes Option Pricing Model (Python)
 
 A clean, production-style Python implementation of the **Black–Scholes model** for European options, including Greeks, volatility estimation from market data, visualization, GUI support, and automated testing.
