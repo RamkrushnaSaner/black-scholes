@@ -5,4 +5,5 @@ matplotlib
 tk
 pytest
 streamlit
-
+requests
+flask
