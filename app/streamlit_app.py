@@ -4,9 +4,21 @@ Black–Scholes Quant App (Streamlit)
 Interactive, math-first Black–Scholes option pricing application
 with Greeks and sensitivity analysis.
 
-This app is intended for quantitative exploration and demonstration.
+Designed to work both locally and on Streamlit Cloud.
 """
 
+# ===============================
+# PYTHON PATH FIX (IMPORTANT)
+# ===============================
+import sys
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.append(str(ROOT_DIR))
+
+# ===============================
+# Imports
+# ===============================
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
@@ -58,6 +70,7 @@ r = st.sidebar.number_input(
 sigma = st.sidebar.number_input(
     "Volatility (σ)", value=0.2, min_value=0.01
 )
+
 option_type = st.sidebar.selectbox(
     "Option Type", ["call", "put"]
 )
@@ -122,7 +135,7 @@ with col_left:
     st.markdown(
         """
         **Model Assumptions**
-        - Log-normal asset dynamics  
+        - Log-normal asset price dynamics  
         - Constant volatility  
         - Frictionless markets  
         - No arbitrage  
